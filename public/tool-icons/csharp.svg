@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="C Sharp">
+  <path fill="#A78BFA" d="M32 6l22 13v26L32 58L10 45V19L32 6Z"/>
+  <path fill="#fff" fill-opacity="0.92" d="M30.5 22.5c-5.8 0-10.5 4.7-10.5 10.5s4.7 10.5 10.5 10.5c2.6 0 5-.9 6.9-2.5l-2.2-2.6c-1.2 1-2.8 1.6-4.7 1.6c-3.7 0-6.7-3-6.7-6.7s3-6.7 6.7-6.7c1.8 0 3.4.6 4.6 1.5l2.2-2.6c-1.9-1.5-4.3-2.5-6.8-2.5Z"/>
+  <path fill="#fff" fill-opacity="0.92" d="M44 26h-3v4h-4v3h4v4h3v-4h4v-3h-4v-4Z"/>
+</svg>

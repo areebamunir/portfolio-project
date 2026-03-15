@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SQL">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#g)" d="M32 6c-11.6 0-21 4.5-21 10v32c0 5.5 9.4 10 21 10s21-4.5 21-10V16c0-5.5-9.4-10-21-10Zm0 6c8.8 0 15 2.9 15 4s-6.2 4-15 4s-15-2.9-15-4s6.2-4 15-4Zm0 40c-8.8 0-15-2.9-15-4v-6c4 2.3 9.7 3.5 15 3.5S43 44.3 47 42v6c0 1.1-6.2 4-15 4Z"/>
+</svg>

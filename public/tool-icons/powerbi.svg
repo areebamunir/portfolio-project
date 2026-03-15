@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Power BI">
+  <path fill="#F2C811" d="M12 14a6 6 0 0 1 6-6h10v48H18a6 6 0 0 1-6-6V14Z"/>
+  <path fill="#F2C811" d="M30 10h12a6 6 0 0 1 6 6v34a6 6 0 0 1-6 6H30V10Z" opacity="0.85"/>
+  <path fill="#F2C811" d="M50 22h2a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6h-2V22Z" opacity="0.65"/>
+</svg>

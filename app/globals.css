@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@plugin '../hero.ts';
+
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-manrope: var(--font-manrope), system-ui, sans-serif;
+  --font-space-grotesk: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-bricolage: var(--font-bricolage), system-ui, sans-serif;
+  --font-instrument-serif: var(--font-instrument-serif), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html[data-theme="dark"] .theme-root {
+  background: #0d0d0f;
+  color: rgb(255 255 255 / 1);
+}
+
+html[data-theme="light"] .theme-root {
+  background: #ffffff;
+  color: rgb(13 13 15 / 1);
+}
+
+html[data-theme="light"] .theme-nav {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+html[data-theme="light"] .theme-root .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+html[data-theme="light"] .theme-root .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+html[data-theme="light"] .theme-root .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+html[data-theme="light"] .theme-root .bg-white\/7 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+html[data-theme="light"] .theme-root .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+html[data-theme="light"] .theme-root .bg-white\/15 {
+  background-color: rgba(0, 0, 0, 0.09) !important;
+}
+
+html[data-theme="light"] .theme-root .bg-white\/30 {
+  background-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+html[data-theme="light"] .theme-root .ring-white\/5 {
+  --tw-ring-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+html[data-theme="light"] .theme-root .decoration-white\/20 {
+  text-decoration-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* keep subtle gradient badges visible in light mode */
+html[data-theme="light"] .theme-root .from-white\/10 {
+  --tw-gradient-from: rgb(0 0 0 / 0.06) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position) !important;
+}
+
+html[data-theme="light"] .theme-root .to-white\/5 {
+  --tw-gradient-to: rgb(0 0 0 / 0.03) var(--tw-gradient-to-position) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white {
+  color: rgb(13 13 15 / 1) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/90 {
+  color: rgb(13 13 15 / 0.9) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/85 {
+  color: rgb(13 13 15 / 0.85) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/80 {
+  color: rgb(13 13 15 / 0.8) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/75 {
+  color: rgb(13 13 15 / 0.75) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/70 {
+  color: rgb(13 13 15 / 0.7) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/65 {
+  color: rgb(13 13 15 / 0.65) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/60 {
+  color: rgb(13 13 15 / 0.6) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/55 {
+  color: rgb(13 13 15 / 0.55) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/50 {
+  color: rgb(13 13 15 / 0.5) !important;
+}
+
+html[data-theme="light"] .theme-root .text-white\/45 {
+  color: rgb(13 13 15 / 0.45) !important;
+}
+
+/* make amber accents readable on light background */
+html[data-theme="light"] .theme-root .text-amber-200,
+html[data-theme="light"] .theme-root .text-amber-200\/90,
+html[data-theme="light"] .theme-root .text-amber-200\/70,
+html[data-theme="light"] .theme-root .text-amber-300 {
+  color: rgb(161 98 7 / 1) !important; /* ~amber-700 */
+}

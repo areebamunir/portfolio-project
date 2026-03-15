@@ -638,30 +638,7 @@ export default function Home() {
                 wrapper: "bg-white/10",
                 thumb: "bg-white",
               }}
-            >
-              <span className="text-sm text-white/70">bright</span>
-            </Switch>
-          </NavbarItem>
-          <NavbarItem className="hidden sm:flex">
-            <Button
-              as={Link}
-              href="#contact"
-              size="sm"
-              className="bg-gradient-to-r from-amber-200 to-amber-500 text-[#0D0D0F] shadow-[0_0_40px_rgba(245,158,11,0.14)]"
-            >
-              Get in Touch
-            </Button>
-          </NavbarItem>
-          <NavbarItem>
-            <Button
-              as={Link}
-              href="#projects"
-              size="sm"
-              variant="flat"
-              className="bg-white/10 text-white hover:bg-white/15"
-            >
-              View My Work
-            </Button>
+            />
           </NavbarItem>
         </NavbarContent>
       </Navbar>

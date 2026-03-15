@@ -563,6 +563,8 @@ export default function Home() {
     },
   ];
 
+  const liveUrl = "https://portfolio-ten-rho-sqnpp5ajay.vercel.app";
+
   const social = [
     { key: "linkedin", label: "LinkedIn", href: linkedInUrl },
     { key: "github", label: "GitHub", href: githubUrl },
@@ -742,6 +744,15 @@ export default function Home() {
                     className="bg-white/10 text-white hover:bg-white/15"
                   >
                     View My Work
+                  </Button>
+                  <Button
+                    as={Link}
+                    href={liveUrl}
+                    isExternal
+                    size="md"
+                    className="border border-amber-200/30 text-amber-200 hover:border-amber-300 hover:text-white"
+                  >
+                    Open Live Portfolio
                   </Button>
                 </motion.div>
 

@@ -563,7 +563,7 @@ export default function Home() {
     },
   ];
 
-  const liveUrl = "https://portfolio-ten-rho-sqnpp5ajay.vercel.app";
+  const liveUrl = "https://areeba-munir.vercel.app";
 
   const social = [
     { key: "linkedin", label: "LinkedIn", href: linkedInUrl },

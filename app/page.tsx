@@ -1175,7 +1175,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap gap-1">
                       {p.stack.slice(0, 4).map((t) => (
-                        <Chip key={t} size="xs" variant="flat" className="bg-white/10 text-white text-[11px]">
+                        <Chip key={t} size="sm" variant="flat" className="bg-white/10 text-white text-[11px]">
                           {t}
                         </Chip>
                       ))}

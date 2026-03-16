@@ -467,8 +467,8 @@ export default function Home() {
     {
       title: "Enterprise Data Chatbot with Snowflake & Azure OpenAI (Internal Project)",
       stack: ["Python", "Snowflake", "Azure OpenAI", "Vector Embeddings", "LLM", "SQL"],
-      imageDark: "/projects/data-chatbot.svg",
-      imageLight: "/projects/data-chatbot.light.svg",
+      imageDark: "/projects/chatbot_project.PNG",
+      imageLight: "/projects/chatbot_project.PNG",
       description:
         "Built an internal LLM-powered chatbot that enables natural language interaction with enterprise datasets stored in Snowflake. Implemented vector embeddings using Azure OpenAI to perform semantic search and contextual retrieval, enabling accurate responses to business queries and improving accessibility of organizational data insights.",
     },

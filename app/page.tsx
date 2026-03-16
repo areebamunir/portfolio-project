@@ -1191,7 +1191,7 @@ export default function Home() {
                         fill
                         unoptimized
                         sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover"
+                        className={p.title.includes("Anemia") ? "object-contain p-2" : "object-cover"}
                       />
                     </div>
                     <div className="text-base leading-relaxed text-white/75">{p.description}</div>

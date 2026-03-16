@@ -457,12 +457,36 @@ export default function Home() {
 
   const projects = [
     {
-      title: "End-to-End NBA Data Analytics Pipeline",
-      stack: ["Python", "SQL", "Airflow", "PostgreSQL", "Polars"],
-      imageDark: "/projects/nba-pipeline.svg",
-      imageLight: "/projects/nba-pipeline.light.svg",
+      title: "AI-Powered Document Data Extraction Pipeline (Internal Project)",
+      stack: ["Python", "REST API", "OCR", "OpenCV", "Image Processing", "LLM", "JSON", "SQL"],
+      imageDark: "/projects/document-ai.svg",
+      imageLight: "/projects/document-ai.light.svg",
       description:
-        "An end-to-end analytics pipeline that ingests multi-season NBA data via APIs, orchestrates transforms with Airflow, and models metrics in PostgreSQL for fast analysis.",
+        "Built an internal AI-powered pipeline that extracts structured data from receipts and API responses using OCR and LLM-based parsing. Implemented image-processing techniques with OpenCV to detect anomalies such as whiteouts and scratch-outs in documents. Extracted fields are validated, transformed into JSON, and automatically loaded into SQL tables through automated data workflows, improving data integrity and reducing manual verification.",
+    },
+    {
+      title: "Enterprise Data Chatbot with Snowflake & Azure OpenAI (Internal Project)",
+      stack: ["Python", "Snowflake", "Azure OpenAI", "Vector Embeddings", "LLM", "SQL"],
+      imageDark: "/projects/data-chatbot.svg",
+      imageLight: "/projects/data-chatbot.light.svg",
+      description:
+        "Built an internal LLM-powered chatbot that enables natural language interaction with enterprise datasets stored in Snowflake. Implemented vector embeddings using Azure OpenAI to perform semantic search and contextual retrieval, enabling accurate responses to business queries and improving accessibility of organizational data insights.",
+    },
+    {
+  title: "End-to-End NBA Data Analytics Pipeline (Client Project)",
+  stack: ["Python", "SQL", "PostgreSQL", "Polars", "REST APIs", "Postman", "Claude Code"],
+  imageDark: "/projects/nba-pipeline.svg",
+  imageLight: "/projects/nba-pipeline.light.svg",
+  description:
+    "Developed a client-facing data analytics pipeline that ingests multi-season NBA datasets through REST APIs. Used Postman to test and validate API endpoints, processed large datasets efficiently with Polars, and modeled analytics-ready tables in PostgreSQL for fast statistical analysis and performance insights.",
+},
+    {
+      title: "Clinical Notes Summarization Tool",
+      stack: ["Python", "Hugging Face", "LLM", "FastAPI", "PostgreSQL", "Docker"],
+      imageDark: "/projects/clinical-llm.svg",
+      imageLight: "/projects/clinical-llm.light.svg",
+      description:
+        "Built an AI-powered system that fine-tunes an open-source LLM to summarize clinical patient notes into structured medical reports, automating key insight extraction and reducing manual documentation effort. The model is deployed through a FastAPI service with a PostgreSQL backend for storing summaries and metadata, and containerized with Docker to ensure reproducible and scalable research environments.",
     },
     {
       title: "Machine Learning-Based Anemia Detection",
@@ -478,7 +502,7 @@ export default function Home() {
       imageDark: "/projects/attendance.svg",
       imageLight: "/projects/attendance.light.svg",
       description:
-        "A desktop tool that captures live video, recognizes faces in real time, and logs attendance automatically—built with OpenCV and a lightweight Tkinter interface.",
+        "A desktop tool that captures live video, recognizes faces in real time, and logs attendance automatically, built with OpenCV and a lightweight Tkinter interface.",
     },
   ];
 
@@ -563,26 +587,31 @@ export default function Home() {
     },
   ];
 
-  const liveUrl = "https://areeba-munir.vercel.app";
-
   const social = [
     { key: "linkedin", label: "LinkedIn", href: linkedInUrl },
     { key: "github", label: "GitHub", href: githubUrl },
     { key: "topmate", label: "Topmate", href: topmateUrl },
   ] as const;
 
+  const [contactEmail, setContactEmail] = useState("");
   const [contactSubject, setContactSubject] = useState("");
   const [contactMessage, setContactMessage] = useState("");
 
   const contactMailtoHref = useMemo(() => {
+    const sender = contactEmail.trim();
     const subject = contactSubject.trim();
     const body = contactMessage.trim();
-    const qs = new URLSearchParams();
-    if (subject) qs.set("subject", subject);
-    if (body) qs.set("body", body);
-    const query = qs.toString();
-    return query ? `mailto:${email}?${query}` : `mailto:${email}`;
-  }, [contactMessage, contactSubject, email]);
+    const params = new URLSearchParams();
+    params.set("view", "cm");
+    params.set("fs", "1");
+    params.set("to", email);
+    if (subject) params.set("su", subject);
+
+    let bodyText = body;
+    if (!bodyText) bodyText = "Hello,";
+    params.set("body", bodyText);
+    return `https://mail.google.com/mail/?${params.toString()}`;
+  }, [contactEmail, contactMessage, contactSubject, email]);
 
   return (
     <div className="theme-root min-h-screen selection:bg-amber-300/30 selection:text-white">
@@ -722,15 +751,7 @@ export default function Home() {
                   >
                     View My Work
                   </Button>
-                  <Button
-                    as={Link}
-                    href={liveUrl}
-                    isExternal
-                    size="md"
-                    className="border border-amber-200/30 text-amber-200 hover:border-amber-300 hover:text-white"
-                  >
-                    Open Live Portfolio
-                  </Button>
+
                 </motion.div>
 
                 <motion.div
@@ -962,20 +983,20 @@ export default function Home() {
                     over three years of professional experience in data engineering.
                   </p>
                   <p>
-                    My journey began with a background in Computer Science from NED University, where I developed a
-                    strong technical foundation. I was drawn into the data field through hands-on work with complex
-                    SQL, ETL pipelines using SSIS, and Python-based data processing\u2014quickly learning what it takes
-                    to maintain reliable production data systems.
+                    My journey began with a Computer Science degree from NED University, where I built a strong technical
+                    foundation. I moved into data through hands-on work with complex SQL, SSIS ETL pipelines, and
+                    Python-based data processing, quickly learning how to build and maintain reliable production
+                    data systems.
                   </p>
                   <p>
-                    Over time, my role evolved from simply building pipelines to owning end-to-end data workflows. I
-                    have worked on designing scalable data pipelines, optimizing performance, and ensuring data
-                    integrity across modern platforms such as Snowflake and Databricks.
+                    Over time, my role evolved from building pipelines to owning end-to-end data workflows. I have
+                    designed scalable data pipelines, optimized performance, and ensured data integrity across modern
+                    platforms such as Snowflake and Databricks.
                   </p>
                   <p className="text-white/70">
-                    Currently, my focus is on modern data and AI-driven workflows, including integrating AI-powered OCR
-                    and object detection into ETL processes. I am particularly interested in building systems that
-                    emphasize correctness, performance, and maintainability in a rapidly evolving data ecosystem.
+                    Today, I focus on modern data and AI-driven workflows, including integrating AI-powered OCR and
+                    object detection into ETL processes. I build systems that prioritize correctness, performance,
+                    and maintainability in a rapidly changing data ecosystem.
                   </p>
                 </div>
               </div>
@@ -1250,8 +1271,14 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <Link isExternal href={c.url} className="shrink-0 text-white/85 underline decoration-white/20">
-                      view link
+                    <Link
+                      isExternal
+                      href={c.url}
+                      aria-label={`Open ${c.title}`}
+                      title={`Open ${c.title}`}
+                      className="shrink-0 rounded-full border border-white/10 bg-white/5 p-2 text-white/85 transition-colors hover:bg-white/10 hover:text-white"
+                    >
+                      <ExternalLinkIcon />
                     </Link>
                   </div>
                 ))}
@@ -1425,7 +1452,9 @@ export default function Home() {
                       classNames={{ inputWrapper: "bg-white/5 border border-white/10" }}
                     />
                     <Input
-                      label="Email"
+                      value={contactEmail}
+                      onValueChange={setContactEmail}
+                      label="Your email"
                       type="email"
                       variant="flat"
                       classNames={{ inputWrapper: "bg-white/5 border border-white/10" }}
@@ -1449,7 +1478,9 @@ export default function Home() {
                       <Button
                         as="a"
                         href={contactMailtoHref}
-                        isDisabled={!contactMessage.trim()}
+                        target="_blank"
+                        rel="noreferrer"
+                        isDisabled={!contactMessage.trim() || !contactEmail.trim()}
                         className="bg-gradient-to-r from-amber-200 to-amber-500 text-[#0D0D0F] shadow-[0_0_40px_rgba(245,158,11,0.14)]"
                       >
                         Send message

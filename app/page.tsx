@@ -1165,26 +1165,26 @@ export default function Home() {
             {projects.map((p) => (
               <Card
                 key={p.title}
-                className="border border-white/10 bg-white/5 transition-colors hover:border-amber-300/25 hover:shadow-[0_0_45px_rgba(245,158,11,0.14)]"
+                className="border border-white/10 bg-white/5 transition-colors hover:border-amber-300/25 hover:shadow-[0_0_35px_rgba(245,158,11,0.14)]"
                 shadow="sm"
               >
-                <CardHeader className="px-6 pb-0 pt-6">
-                  <div className="space-y-3">
-                    <div className="font-[family-name:var(--font-space-grotesk)] text-xl font-semibold">
+                <CardHeader className="px-4 pb-0 pt-4">
+                  <div className="space-y-2">
+                    <div className="font-[family-name:var(--font-space-grotesk)] text-lg font-semibold">
                       {p.title}
                     </div>
-                    <div className="flex flex-wrap gap-2">
-                      {p.stack.map((t) => (
-                        <Chip key={t} size="sm" variant="flat" className="bg-white/10 text-white">
+                    <div className="flex flex-wrap gap-1">
+                      {p.stack.slice(0, 4).map((t) => (
+                        <Chip key={t} size="xs" variant="flat" className="bg-white/10 text-white text-[11px]">
                           {t}
                         </Chip>
                       ))}
                     </div>
                   </div>
                 </CardHeader>
-                <CardBody className="px-6 pb-6 pt-4">
-                  <div className="space-y-4">
-                    <div className="relative h-44 overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:h-48">
+                <CardBody className="px-4 pb-4 pt-2">
+                  <div className="space-y-3">
+                    <div className="relative h-32 overflow-hidden rounded-xl border border-white/10 bg-white/5 md:h-36">
                       <Image
                         src={isLight ? p.imageLight : p.imageDark}
                         alt={p.title}
@@ -1194,7 +1194,7 @@ export default function Home() {
                         className={p.title.includes("Anemia") ? "object-contain p-2" : "object-cover"}
                       />
                     </div>
-                    <div className="text-base leading-relaxed text-white/75">{p.description}</div>
+                    <div className="text-sm leading-relaxed text-white/75 line-clamp-3">{p.description}</div>
                   </div>
                 </CardBody>
               </Card>

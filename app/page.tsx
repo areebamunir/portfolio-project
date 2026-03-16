@@ -1173,9 +1173,9 @@ export default function Home() {
                     <div className="font-[family-name:var(--font-space-grotesk)] text-lg font-semibold">
                       {p.title}
                     </div>
-                    <div className="flex flex-wrap gap-1">
-                      {p.stack.slice(0, 4).map((t) => (
-                        <Chip key={t} size="sm" variant="flat" className="bg-white/10 text-white text-[11px]">
+                    <div className="flex flex-wrap gap-2">
+                      {p.stack.map((t) => (
+                        <Chip key={t} size="sm" variant="flat" className="bg-white/10 text-white">
                           {t}
                         </Chip>
                       ))}

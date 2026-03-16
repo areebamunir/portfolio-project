@@ -491,8 +491,8 @@ export default function Home() {
     {
       title: "Machine Learning-Based Anemia Detection",
       stack: ["Python", "Flask", "Scikit-learn", "Pandas"],
-      imageDark: "/projects/anemia-ml.svg",
-      imageLight: "/projects/anemia-ml.light.svg",
+      imageDark: "/projects/anemia_detection_fyp.PNG",
+      imageLight: "/projects/anemia_detection_fyp.PNG",
       description:
         "A ML-powered web app that predicts common anemia types from input features, packaged with a clean Flask UI and a scikit-learn model for real-time inference.",
     },

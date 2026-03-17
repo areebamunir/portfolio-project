@@ -1,16 +1,10 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 
 export const alt = "Areeba Munir | Portfolio";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OgImage() {
-  const [manropeBold] = await Promise.all([
-    readFile(join(process.cwd(), "app/fonts/Manrope-Bold.ttf")),
-  ]);
-
   return new ImageResponse(
     (
       <div
@@ -39,7 +33,6 @@ export default async function OgImage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 18, zIndex: 1 }}>
           <div
             style={{
-              fontFamily: "Manrope",
               fontSize: 88,
               fontWeight: 700,
               color: "#ffffff",
@@ -51,7 +44,6 @@ export default async function OgImage() {
           </div>
           <div
             style={{
-              fontFamily: "Manrope",
               fontSize: 28,
               fontWeight: 700,
               color: "rgba(255,255,255,0.78)",
@@ -72,7 +64,6 @@ export default async function OgImage() {
               <div
                 key={t}
                 style={{
-                  fontFamily: "Manrope",
                   fontSize: 18,
                   fontWeight: 700,
                   color: "rgba(255,255,255,0.85)",
@@ -91,14 +82,6 @@ export default async function OgImage() {
     ),
     {
       ...size,
-      fonts: [
-        {
-          name: "Manrope",
-          data: manropeBold,
-          style: "normal",
-          weight: 700,
-        },
-      ],
     }
   );
 }

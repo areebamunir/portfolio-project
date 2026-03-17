@@ -459,40 +459,40 @@ export default function Home() {
     {
       title: "AI-Powered Document Data Extraction Pipeline (Internal Project)",
       stack: ["Python", "REST API", "OCR", "OpenCV", "Image Processing", "LLM", "JSON", "SQL"],
-      imageDark: "/projects/document-ai.svg",
-      imageLight: "/projects/document-ai.light.svg",
+      imageDark: "/projects/nba-pipeline.svg",
+      imageLight: "/projects/nba-pipeline.light.svg",
       description:
-        "Built an internal AI-powered pipeline that extracts structured data from receipts and API responses using OCR and LLM-based parsing. Implemented image-processing techniques with OpenCV to detect anomalies such as whiteouts and scratch-outs in documents. Extracted fields are validated, transformed into JSON, and automatically loaded into SQL tables through automated data workflows, improving data integrity and reducing manual verification.",
+        "AI pipeline that extracts structured data from receipts using OCR and LLM-based parsing, with OpenCV for anomaly detection. Fields are validated, converted to JSON, and auto-loaded into SQL tables.",
     },
     {
       title: "Enterprise Data Chatbot with Snowflake & Azure OpenAI (Internal Project)",
       stack: ["Python", "Snowflake", "Azure OpenAI", "Vector Embeddings", "LLM", "SQL"],
-      imageDark: "/projects/chatbot_project.PNG",
-      imageLight: "/projects/chatbot_project.PNG",
+      imageDark: "/projects/anemia-ml.svg",
+      imageLight: "/projects/anemia-ml.light.svg",
       description:
-        "Built an internal LLM-powered chatbot that enables natural language interaction with enterprise datasets stored in Snowflake. Implemented vector embeddings using Azure OpenAI to perform semantic search and contextual retrieval, enabling accurate responses to business queries and improving accessibility of organizational data insights.",
+        "LLM-powered chatbot for natural language querying of Snowflake enterprise data, using Azure OpenAI vector embeddings for semantic search and contextual retrieval.",
     },
     {
-  title: "End-to-End NBA Data Analytics Pipeline (Client Project)",
-  stack: ["Python", "SQL", "PostgreSQL", "Polars", "REST APIs", "Postman", "Claude Code"],
-  imageDark: "/projects/nba-pipeline.svg",
-  imageLight: "/projects/nba-pipeline.light.svg",
-  description:
-    "Developed a client-facing data analytics pipeline that ingests multi-season NBA datasets through REST APIs. Used Postman to test and validate API endpoints, processed large datasets efficiently with Polars, and modeled analytics-ready tables in PostgreSQL for fast statistical analysis and performance insights.",
-},
+      title: "End-to-End NBA Data Analytics Pipeline (Client Project)",
+      stack: ["Python", "SQL", "PostgreSQL", "Polars", "REST APIs", "Postman", "Claude Code"],
+      imageDark: "/projects/nba-pipeline.svg",
+      imageLight: "/projects/nba-pipeline.light.svg",
+      description:
+        "Data analytics pipeline for NBA datasets using REST APIs, Polars for processing, and PostgreSQL for performance insights. Validated endpoints with Postman.",
+    },
     {
       title: "Clinical Notes Summarization Tool",
       stack: ["Python", "Hugging Face", "LLM", "FastAPI", "PostgreSQL", "Docker"],
-      imageDark: "/projects/clinical-llm.svg",
-      imageLight: "/projects/clinical-llm.light.svg",
+      imageDark: "/projects/attendance.svg",
+      imageLight: "/projects/attendance.light.svg",
       description:
-        "Built an AI-powered system that fine-tunes an open-source LLM to summarize clinical patient notes into structured medical reports, automating key insight extraction and reducing manual documentation effort. The model is deployed through a FastAPI service with a PostgreSQL backend for storing summaries and metadata, and containerized with Docker to ensure reproducible and scalable research environments.",
+        "AI system that automates clinical note summarization using a fine-tuned LLM, reducing manual documentation effort. Built with FastAPI, PostgreSQL, and Docker.",
     },
     {
       title: "Machine Learning-Based Anemia Detection",
       stack: ["Python", "Flask", "Scikit-learn", "Pandas"],
-      imageDark: "/projects/anemia_detection_fyp.PNG",
-      imageLight: "/projects/anemia_detection_fyp.PNG",
+      imageDark: "/projects/anemia-ml.svg",
+      imageLight: "/projects/anemia-ml.light.svg",
       description:
         "A ML-powered web app that predicts common anemia types from input features, packaged with a clean Flask UI and a scikit-learn model for real-time inference.",
     },

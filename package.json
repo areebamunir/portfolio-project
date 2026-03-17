@@ -10,6 +10,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "vercel-build": "next build",
     "lint": "eslint app/"
   },
   "dependencies": {
